@@ -1,6 +1,6 @@
 class LinkedList:
     def __init__(self):
-        self.head = null
+        self.head = None
 
     def get_head(self):
         return self.head
