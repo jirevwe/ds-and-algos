@@ -1,13 +1,13 @@
-from ds.linked_list.linked_list import LinkedList
+from linked_list.linked_list import LinkedList
 
-linkedList = LinkedList()
-linkedList.add(2)
-linkedList.add(4)
-linkedList.add(25)
-linkedList.add(20)
-linkedList.add(12)
-print(list(linkedList.walk()))
+linked_list = LinkedList()
+linked_list.add(2)
+linked_list.add(4)
+linked_list.add(25)
+linked_list.add(20)
+linked_list.add(12)
+print(list(linked_list.walk()))
 
-linkedList.remove(20)
-print(list(linkedList.walk()))
-print(linkedList.head.value, linkedList.tail.value)
+linked_list.remove(20)
+print(list(linked_list.walk()))
+print(linked_list.head.value, linked_list.tail.value)
