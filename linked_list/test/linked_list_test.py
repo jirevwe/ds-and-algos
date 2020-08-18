@@ -13,18 +13,21 @@ class TestLinkedList(unittest.TestCase):
         linked_list = LinkedList()
         linked_list.add(1)
         self.assertEqual(linked_list.head.value, 1)
+        self.assertEqual(linked_list.tail.value, 1)
 
     def test_node_value_exists(self):
         linked_list = LinkedList()
         linked_list.add(1)
         linked_list.add(22)
         self.assertEqual(linked_list.head.next.value, 22)
+        self.assertEqual(linked_list.head.next.value, linked_list.tail.value)
 
     def test_prepend_before_head(self):
         linked_list = LinkedList()
         linked_list.add(1)
         linked_list.prepend(20)
         self.assertEqual(linked_list.head.value, 20)
+        self.assertEqual(linked_list.tail.value, 1)
 
     def test_item_removal(self):
         linked_list = LinkedList()
