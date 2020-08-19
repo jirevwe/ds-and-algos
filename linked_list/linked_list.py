@@ -9,6 +9,9 @@ class LinkedList:
     def get_head(self):
         return self.head.value
 
+    def get_tail(self):
+        return self.tail.value
+
     def add(self, value):
         node = Node(value)
         if self.head is None:
@@ -51,3 +54,11 @@ class LinkedList:
         while node is not None:
             yield node.value
             node = node.next
+
+    def search(self, value):
+        node = self.head
+        while node is not None and node.value != value:
+            node = node.next
+        if node is None:
+            return False
+        return True
