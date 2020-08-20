@@ -39,7 +39,7 @@ class TestLinkedList(unittest.TestCase):
         linked_list.add(20)
         linked_list.add(12)
         self.assertEqual(linked_list.remove(2), True)
-        self.assertEqual(list(linked_list.walk()), [4, 25, 20, 12])
+        self.assertEqual(linked_list.walk(), [4, 25, 20, 12])
 
     def test_remove_from_tail(self):
         linked_list = LinkedList()
@@ -49,7 +49,7 @@ class TestLinkedList(unittest.TestCase):
         linked_list.add(20)
         linked_list.add(12)
         self.assertEqual(linked_list.remove(12), True)
-        self.assertEqual(list(linked_list.walk()), [2, 4, 25, 20])
+        self.assertEqual(linked_list.walk(), [2, 4, 25, 20])
 
     def test_remove_from_middle(self):
         linked_list = LinkedList()
@@ -59,7 +59,7 @@ class TestLinkedList(unittest.TestCase):
         linked_list.add(20)
         linked_list.add(12)
         self.assertEqual(linked_list.remove(25), True)
-        self.assertEqual(list(linked_list.walk()), [2, 4, 20, 12])
+        self.assertEqual(linked_list.walk(), [2, 4, 20, 12])
 
     def test_remove_item_not_in_list(self):
         linked_list = LinkedList()
@@ -69,7 +69,7 @@ class TestLinkedList(unittest.TestCase):
         linked_list.add(20)
         linked_list.add(12)
         self.assertEqual(linked_list.remove(0), False)
-        self.assertEqual(list(linked_list.walk()), [2, 4, 25, 20, 12])
+        self.assertEqual(linked_list.walk(), [2, 4, 25, 20, 12])
 
     def test_walk(self):
         linked_list = LinkedList()
@@ -78,11 +78,11 @@ class TestLinkedList(unittest.TestCase):
         linked_list.add(25)
         linked_list.add(20)
         linked_list.add(12)
-        self.assertEqual(list(linked_list.walk()), [2, 4, 25, 20, 12])
+        self.assertEqual(linked_list.walk(), [2, 4, 25, 20, 12])
 
     def test_walk_list_empty(self):
         linked_list = LinkedList()
-        self.assertEqual(list(linked_list.walk()), [])
+        self.assertEqual(linked_list.walk(), [])
 
     def test_search_item_at_head(self):
         linked_list = LinkedList()

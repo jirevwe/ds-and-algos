@@ -13,6 +13,11 @@ class LinkedList:
         return self.tail.value
 
     def add(self, value):
+        """
+        Adds the value to the end of the list
+
+        :param value: the value to be added
+        """
         node = Node(value)
         if self.head is None:
             self.head = node
@@ -22,11 +27,22 @@ class LinkedList:
             self.tail = node
 
     def prepend(self, value):
+        """
+        Adds the value to the start of the list
+
+        :param value: the value to be added
+        """
         node = Node(value)
         node.next = self.head
         self.head = node
 
     def remove(self, value):
+        """
+        Finds the vales and removes it
+
+        :param value: the value to be removed
+        :return: True if the value was removed, False if the value isn't in the list
+        """
         if self.head is None:
             return False
 
@@ -50,12 +66,26 @@ class LinkedList:
         return False
 
     def walk(self):
+        """
+        Prints out all the items in the list starting from the head
+
+        :rtype: collections.Iterable[Node]
+        :returns: An array of the items in the list
+        """
         node = self.head
+        items = []
         while node is not None:
-            yield node.value
+            items.append(node.value)
             node = node.next
+        return items
 
     def search(self, value):
+        """
+        Searches the list to see if an item is inside
+
+        :param value: The item searched for
+        :returns: True or False
+        """
         node = self.head
         while node is not None and node.value != value:
             node = node.next
