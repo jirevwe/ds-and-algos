@@ -48,7 +48,7 @@ class LinkedList:
 
         current = self.head
         if current.value == value:
-            if self.head.value == self.tail.value:
+            if self.head == self.tail:
                 self.head = None
                 self.tail = None
             else:
